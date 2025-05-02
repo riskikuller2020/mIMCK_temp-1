@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>IMCK - Institut Médical Chrétien du Kasai</title>
+  <title data-key="site_title"></title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,14 +38,21 @@
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com" data-key="topbar_email"></a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span data-key="topbar_phone"></span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Lang flag" />
+          <select id="language-select" aria-label="Language selection" onchange="changeLanguage(this)">
+              <option value="en" data-flag="gb">Eng</option>
+              <option value="fr" data-flag="fr">Fra</option>
+          </select>
         </div>
       </div>
     </div><!-- End Top Bar -->
@@ -54,46 +61,49 @@
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
           <h1 class="sitename">IMCK</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home<br></a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#departments">Departments</a></li>
-            <li><a href="#doctors">Doctors</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="#hero" class="active" data-key="nav_home"><br></a></li>
+            <li><a href="#about" data-key="nav_about"></a></li>
+            <li><a href="#services" data-key="nav_services"></a></li>
+            <li><a href="#departments" data-key="nav_departments"></a></li>
+            <li><a href="#doctors" data-key="nav_doctors"></a></li>
+            <li class="dropdown">
+              <a href="#">
+                <span data-key="nav_dropdown"></span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
               <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li><a href="#" data-key="nav_dropdown1"></a></li>
+                <li class="dropdown">
+                  <a href="#">
+                    <span data-key="nav_deep_dropdown"></span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                  </a>
                   <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
+                    <li><a href="#" data-key="nav_deep_dropdown1"></a></li>
+                    <li><a href="#" data-key="nav_deep_dropdown2"></a></li>
+                    <li><a href="#" data-key="nav_deep_dropdown3"></a></li>
+                    <li><a href="#" data-key="nav_deep_dropdown4"></a></li>
+                    <li><a href="#" data-key="nav_deep_dropdown5"></a></li>
                   </ul>
                 </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
+                <li><a href="#" data-key="nav_dropdown2"></a></li>
+                <li><a href="#" data-key="nav_dropdown3"></a></li>
+                <li><a href="#" data-key="nav_dropdown4"></a></li>
               </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" data-key="nav_contact"></a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="cta-btn d-none d-sm-block" href="#appointment">Make an Appointment</a>
+        <a class="cta-btn d-none d-sm-block" href="#appointment" data-key="cta_appointment"></a>
 
       </div>
 
     </div>
-
   </header>
 
   <main class="main">
@@ -106,20 +116,17 @@
       <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2>WELCOME TO IMCK</h2>
-          <p>Institut Médical Chrétien du Kasai</p>
+          <h2 data-key="hero_welcome_heading"></h2>
+          <p data-key="hero_welcome_subtext"></p>
         </div><!-- End Welcome -->
 
         <div class="content row gy-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <h3>Why Choose IMCK?</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-              </p>
+              <h3 data-key="hero_why_choose_title"></h3>
+              <p data-key="hero_why_choose_text"></p>
               <div class="text-center">
-                <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="#about" class="more-btn"><span data-key="hero_learn_more"></span> <i class="bi bi-chevron-right"></i></a>
               </div>
             </div>
           </div><!-- End Why Box -->
@@ -131,24 +138,24 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
                     <i class="bi bi-clipboard-data"></i>
-                    <h4>Corporis voluptates officia eiusmod</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <h4 data-key="iconbox1_title"></h4>
+                    <p data-key="iconbox1_text"></p>
                   </div>
                 </div><!-- End Icon Box -->
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
                     <i class="bi bi-gem"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <h4 data-key="iconbox2_title"></h4>
+                    <p data-key="iconbox2_text"></p>
                   </div>
                 </div><!-- End Icon Box -->
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
                     <i class="bi bi-inboxes"></i>
-                    <h4>Labore consequatur incidid dolore</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <h4 data-key="iconbox3_title"></h4>
+                    <p data-key="iconbox3_text"></p>
                   </div>
                 </div><!-- End Icon Box -->
 
@@ -174,30 +181,28 @@
           </div>
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <h3>About Us</h3>
-            <p>
-              Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
-            </p>
+            <h3 data-key="about_heading"></h3>
+            <p data-key="about_text"></p>
             <ul>
               <li>
                 <i class="fa-solid fa-vial-circle-check"></i>
                 <div>
-                  <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                  <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                  <h5 data-key="about_list1_title"></h5>
+                  <p data-key="about_list1_text"></p>
                 </div>
               </li>
               <li>
                 <i class="fa-solid fa-pump-medical"></i>
                 <div>
-                  <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                  <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+                  <h5 data-key="about_list2_title"></h5>
+                  <p data-key="about_list2_text"></p>
                 </div>
               </li>
               <li>
                 <i class="fa-solid fa-heart-circle-xmark"></i>
                 <div>
-                  <h5>Voluptatem et qui exercitationem</h5>
-                  <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+                  <h5 data-key="about_list3_title"></h5>
+                  <p data-key="about_list3_text"></p>
                 </div>
               </li>
             </ul>
@@ -220,7 +225,7 @@
             <i class="fa-solid fa-user-doctor"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Doctors</p>
+              <p data-key="stats_doctors"></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -228,7 +233,7 @@
             <i class="fa-regular fa-hospital"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Departments</p>
+              <p data-key="stats_departments"></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -236,7 +241,7 @@
             <i class="fas fa-flask"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Research Labs</p>
+              <p data-key="stats_research_labs"></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -244,7 +249,7 @@
             <i class="fas fa-award"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Awards</p>
+              <p data-key="stats_awards"></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -259,8 +264,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-key="services_heading"></h2>
+        <p data-key="services_subtext"></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -273,9 +278,9 @@
                 <i class="fas fa-heartbeat"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Nesciunt Mete</h3>
+                <h3 data-key="service1_title"></h3>
               </a>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <p data-key="service1_text"></p>
             </div>
           </div><!-- End Service Item -->
 
@@ -285,9 +290,9 @@
                 <i class="fas fa-pills"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Eosle Commodi</h3>
+                <h3 data-key="service2_title"></h3>
               </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <p data-key="service2_text"></p>
             </div>
           </div><!-- End Service Item -->
 
@@ -297,9 +302,9 @@
                 <i class="fas fa-hospital-user"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Ledo Markt</h3>
+                <h3 data-key="service3_title"></h3>
               </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <p data-key="service3_text"></p>
             </div>
           </div><!-- End Service Item -->
 
@@ -309,9 +314,9 @@
                 <i class="fas fa-dna"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Asperiores Commodit</h3>
+                <h3 data-key="service4_title"></h3>
               </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <p data-key="service4_text"></p>
               <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
@@ -322,9 +327,9 @@
                 <i class="fas fa-wheelchair"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Velit Doloremque</h3>
+                <h3 data-key="service5_title"></h3>
               </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <p data-key="service5_text"></p>
               <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
@@ -335,9 +340,9 @@
                 <i class="fas fa-notes-medical"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Dolori Architecto</h3>
+                <h3 data-key="service6_title"></h3>
               </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <p data-key="service6_text"></p>
               <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
@@ -353,8 +358,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Appointment</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-key="appointment_heading"></h2>
+        <p data-key="appointment_subtext"></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -377,18 +382,18 @@
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="department" id="department" class="form-select" required="">
-                <option value="">Select Department</option>
-                <option value="Department 1">Department 1</option>
-                <option value="Department 2">Department 2</option>
-                <option value="Department 3">Department 3</option>
+                <option value="" data-key="appointment_select_department"></option>
+                <option value="Department 1" data-key="appointment_department1"></option>
+                <option value="Department 2" data-key="appointment_department2"></option>
+                <option value="Department 3" data-key="appointment_department3"></option>
               </select>
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="doctor" id="doctor" class="form-select" required="">
-                <option value="">Select Doctor</option>
-                <option value="Doctor 1">Doctor 1</option>
-                <option value="Doctor 2">Doctor 2</option>
-                <option value="Doctor 3">Doctor 3</option>
+                <option value="" data-key="appointment_select_doctor"></option>
+                <option value="Doctor 1" data-key="appointment_doctor1"></option>
+                <option value="Doctor 2" data-key="appointment_doctor2"></option>
+                <option value="Doctor 3" data-key="appointment_doctor3"></option>
               </select>
             </div>
           </div>
@@ -397,10 +402,10 @@
             <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
           </div>
           <div class="mt-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-            <div class="text-center"><button type="submit">Make an Appointment</button></div>
+            <div class="loading" data-key="appointment_loading"></div>
+            <div class="error-message" data-key="appointment_error_message"></div>
+            <div class="sent-message" data-key="appointment_sent_message"></div>
+            <div class="text-center"><button type="submit" data-key="appointment_submit_button"></button></div>
           </div>
         </form>
 
@@ -413,8 +418,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Departments</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-key="departments_heading"></h2>
+        <p data-key="departments_subtext"></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -423,19 +428,19 @@
           <div class="col-lg-3">
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#departments-tab-1">Cardiology</a>
+                <a class="nav-link active show" data-bs-toggle="tab" href="#departments-tab-1" data-key="departments_tab1"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-2">Neurology</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-2" data-key="departments_tab2"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-3">Hepatology</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-3" data-key="departments_tab3"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-4">Pediatrics</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-4" data-key="departments_tab4"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-5">Eye Care</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-5" data-key="departments_tab5"></a>
               </li>
             </ul>
           </div>
@@ -444,9 +449,9 @@
               <div class="tab-pane active show" id="departments-tab-1">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Cardiology</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    <h3 data-key="departments_tab1_heading"></h3>
+                    <p class="fst-italic" data-key="departments_tab1_subtext"></p>
+                    <p data-key="departments_tab1_text"></p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
@@ -456,9 +461,9 @@
               <div class="tab-pane" id="departments-tab-2">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Et blanditiis nemo veritatis excepturi</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                    <h3 data-key="departments_tab2_heading"></h3>
+                    <p class="fst-italic" data-key="departments_tab2_subtext"></p>
+                    <p data-key="departments_tab2_text"></p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/departments-2.jpg" alt="" class="img-fluid">
@@ -468,21 +473,21 @@
               <div class="tab-pane" id="departments-tab-3">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                    <h3 data-key="departments_tab3_heading"></h3>
+                    <p class="fst-italic" data-key="departments_tab3_subtext"></p>
+                    <p data-key="departments_tab3_text"></p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/departments-3.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/departments-3.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="departments-tab-4">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                    <h3 data-key="departments_tab4_heading"></h3>
+                    <p class="fst-italic" data-key="departments_tab4_subtext"></p>
+                    <p data-key="departments_tab4_text"></p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/departments-4.jpg" alt="" class="img-fluid">
@@ -492,9 +497,9 @@
               <div class="tab-pane" id="departments-tab-5">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                    <h3 data-key="departments_tab5_heading"></h3>
+                    <p class="fst-italic" data-key="departments_tab5_subtext"></p>
+                    <p data-key="departments_tab5_text"></p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
@@ -514,8 +519,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Doctors</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-key="doctors_heading"></h2>
+        <p data-key="doctors_subtext"></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -526,9 +531,9 @@
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/doctors-1.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <h4 data-key="doctor1_name"></h4>
+                <span data-key="doctor1_title"></span>
+                <p data-key="doctor1_description"></p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -543,9 +548,9 @@
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/doctors-2.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Anesthesiologist</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <h4 data-key="doctor2_name"></h4>
+                <span data-key="doctor2_title"></span>
+                <p data-key="doctor2_description"></p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -560,9 +565,9 @@
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/doctors-3.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cardiology</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <h4 data-key="doctor3_name"></h4>
+                <span data-key="doctor3_title"></span>
+                <p data-key="doctor3_description"></p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -577,9 +582,9 @@
             <div class="team-member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/doctors-4.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Neurosurgeon</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <h4 data-key="doctor4_name"></h4>
+                <span data-key="doctor4_title"></span>
+                <p data-key="doctor4_description"></p>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -601,8 +606,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-key="faq_heading"></h2>
+        <p data-key="faq_subtext"></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -614,49 +619,49 @@
             <div class="faq-container">
 
               <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                <h3 data-key="faq1_question"></h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                  <p data-key="faq1_answer"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
+                <h3 data-key="faq2_question"></h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p data-key="faq2_answer"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                <h3 data-key="faq3_question"></h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                  <p data-key="faq3_answer"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                <h3 data-key="faq4_question"></h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p data-key="faq4_answer"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
+                <h3 data-key="faq5_question"></h3>
                 <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                  <p data-key="faq5_answer"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
+                <h3 data-key="faq6_question"></h3>
                 <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
+                  <p data-key="faq6_answer"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -679,11 +684,8 @@
         <div class="row align-items-center">
 
           <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
-            <h3>Testimonials</h3>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-            </p>
+            <h3 data-key="testimonials_heading"></h3>
+            <p data-key="testimonials_subtext"></p>
           </div>
 
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
@@ -711,8 +713,8 @@
                     <div class="d-flex">
                       <img src="assets/img/testimonials/testimonials-1.png" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <h3 data-key="testimonial1_name"></h3>
+                        <h4 data-key="testimonial1_title"></h4>
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -720,7 +722,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                      <span data-key="testimonial1_text"></span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -731,8 +733,8 @@
                     <div class="d-flex">
                       <img src="assets/img/testimonials/testimonials-2.png" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
+                        <h3 data-key="testimonial2_name"></h3>
+                        <h4 data-key="testimonial2_title"></h4>
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -740,7 +742,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                      <span data-key="testimonial2_text"></span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -751,8 +753,8 @@
                     <div class="d-flex">
                       <img src="assets/img/testimonials/testimonials-3.png" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
+                        <h3 data-key="testimonial3_name"></h3>
+                        <h4 data-key="testimonial3_title"></h4>
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -760,7 +762,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                      <span data-key="testimonial3_text"></span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -771,8 +773,8 @@
                     <div class="d-flex">
                       <img src="assets/img/testimonials/testimonials-4.png" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Matt Brandon</h3>
-                        <h4>Freelancer</h4>
+                        <h3 data-key="testimonial4_name"></h3>
+                        <h4 data-key="testimonial4_title"></h4>
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -780,7 +782,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                      <span data-key="testimonial4_text"></span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -791,8 +793,8 @@
                     <div class="d-flex">
                       <img src="assets/img/testimonials/testimonials-5.png" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
+                        <h3 data-key="testimonial5_name"></h3>
+                        <h4 data-key="testimonial5_title"></h4>
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -800,7 +802,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                      <span data-key="testimonial5_text"></span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -823,8 +825,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Gallery</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-key="gallery_heading"></h2>
+        <p data-key="gallery_subtext"></p>
       </div><!-- End Section Title -->
 
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
@@ -906,8 +908,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-key="contact_heading"></h2>
+        <p data-key="contact_subtext"></p>
       </div><!-- End Section Title -->
 
       <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
@@ -922,24 +924,24 @@
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Location</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h3 data-key="contact_location_heading"></h3>
+                <p data-key="contact_location_text"></p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <h3 data-key="contact_call_heading"></h3>
+                <p data-key="contact_call_text"></p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <h3 data-key="contact_email_heading"></h3>
+                <p data-key="contact_email_text"></p>
               </div>
             </div><!-- End Info Item -->
 
@@ -994,10 +996,10 @@
             <span class="sitename">IMCK</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p data-key="footer_address_1"></p>
+            <p data-key="footer_address_2"></p>
+            <p class="mt-3"><strong>Phone:</strong> <span data-key="footer_phone"></span></p>
+            <p><strong>Email:</strong> <span data-key="footer_email"></span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -1008,46 +1010,46 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4 data-key="footer_links_heading"></h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#" data-key="footer_link_home"></a></li>
+            <li><a href="#" data-key="footer_link_about"></a></li>
+            <li><a href="#" data-key="footer_link_services"></a></li>
+            <li><a href="#" data-key="footer_link_terms"></a></li>
+            <li><a href="#" data-key="footer_link_privacy"></a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4 data-key="footer_services_heading"></h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#" data-key="footer_service_web_design"></a></li>
+            <li><a href="#" data-key="footer_service_web_dev"></a></li>
+            <li><a href="#" data-key="footer_service_product_mgmt"></a></li>
+            <li><a href="#" data-key="footer_service_marketing"></a></li>
+            <li><a href="#" data-key="footer_service_graphic_design"></a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
+          <h4 data-key="footer_misc_heading"></h4>
           <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
+            <li><a href="#" data-key="footer_misc_link1"></a></li>
+            <li><a href="#" data-key="footer_misc_link2"></a></li>
+            <li><a href="#" data-key="footer_misc_link3"></a></li>
+            <li><a href="#" data-key="footer_misc_link4"></a></li>
+            <li><a href="#" data-key="footer_misc_link5"></a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
+          <h4 data-key="footer_other_heading"></h4>
           <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
+            <li><a href="#" data-key="footer_other_link1"></a></li>
+            <li><a href="#" data-key="footer_other_link2"></a></li>
+            <li><a href="#" data-key="footer_other_link3"></a></li>
+            <li><a href="#" data-key="footer_other_link4"></a></li>
+            <li><a href="#" data-key="footer_other_link5"></a></li>
           </ul>
         </div>
 
@@ -1055,7 +1057,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">IMCK</strong> <span>All Rights Reserved</span></p>
+      <p><span data-key="footer_copyright"></span> <strong class="px-1 sitename">IMCK</strong> <span data-key="footer_all_rights"></span></p>
     </div>
 
   </footer>
@@ -1076,6 +1078,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/translation.js"></script>
 
 </body>
 
