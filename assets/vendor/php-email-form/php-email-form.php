@@ -29,18 +29,12 @@ class PHP_Email_Form {
     );
   }
 
-  /**
-   * Saadab e‑kirja.
-   *
-   * @return string "OK", kui kiri saadetud, või veateade.
-   */
+  
   public function send() {
-    // Sõnumite sorteerimine prioriteedi alusel
     usort($this->messages, function($a, $b) {
       return $a["priority"] - $b["priority"];
     });
 
-    // Ehita kirja sisu kokku
     $body = "";
     foreach ($this->messages as $msg) {
       if (!empty($msg['label'])) {
@@ -50,13 +44,10 @@ class PHP_Email_Form {
       }
     }
 
-    // Ehita päised
     $headers = "From: " . $this->from_name . " <" . $this->from_email . ">\r\n";
     $headers .= "Reply-To: " . $this->from_email . "\r\n";
     $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
-    // Kui SMTP seaded on määratud, siis tuleks siin kasutada sobivat SMTP kliendi lahendust
-    // Näiteks PHPMailer või SwiftMailer, kuid siin kasutame lihtsustatult mail() funktsiooni
 
     if(mail($this->to, $this->subject, $body, $headers)) {
       return "OK";

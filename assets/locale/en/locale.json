@@ -1,8 +1,10 @@
 {
   "lang": "en",
   "site_title": "IMCK - Institut Médical Chrétien du Kasai",
+
   "topbar_email": "contact@example.com",
   "topbar_phone": "+1 5589 55488 55",
+
   "nav_home": "Home",
   "nav_about": "About",
   "nav_services": "Services",
@@ -21,17 +23,20 @@
   "nav_dropdown4": "Dropdown 4",
   "nav_contact": "Contact",
   "cta_appointment": "Make an Appointment",
+
   "hero_welcome_heading": "WELCOME TO IMCK",
   "hero_welcome_subtext": "Institut Médical Chrétien du Kasai",
   "hero_why_choose_title": "Why Choose IMCK?",
   "hero_why_choose_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.",
   "hero_learn_more": "Learn More",
+
   "iconbox1_title": "Corporis voluptates officia eiusmod",
   "iconbox1_text": "Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip",
   "iconbox2_title": "Ullamco laboris ladore pan",
   "iconbox2_text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt",
   "iconbox3_title": "Labore consequatur incidid dolore",
   "iconbox3_text": "Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere",
+
   "about_heading": "About Us",
   "about_text": "Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.",
   "about_list1_title": "Ullamco laboris nisi ut aliquip consequat",
@@ -40,10 +45,12 @@
   "about_list2_text": "Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi",
   "about_list3_title": "Voluptatem et qui exercitationem",
   "about_list3_text": "Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam",
+
   "stats_doctors": "Doctors",
   "stats_departments": "Departments",
-  "stats_labs": "Research Labs",
+  "stats_research_labs": "Research Labs",
   "stats_awards": "Awards",
+
   "services_title": "Services",
   "services_description": "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
   "service1_title": "Nesciunt Mete",
@@ -58,8 +65,10 @@
   "service5_text": "Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.",
   "service6_title": "Dolori Architecto",
   "service6_text": "Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.",
+
   "appointment_title": "Appointment",
   "appointment_description": "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
+
   "form_placeholder_name": "Your Name",
   "form_placeholder_email": "Your Email",
   "form_placeholder_phone": "Your Phone",
@@ -74,8 +83,10 @@
   "form_doctor_3": "Doctor 3",
   "form_placeholder_message": "Message (Optional)",
   "form_loading": "Loading",
+  "form_error_message": "Something went wrong. Please try again.",
   "form_success_appointment": "Your appointment request has been sent successfully. Thank you!",
   "form_submit_button": "Make an Appointment",
+
   "departments_title": "Departments",
   "departments_description": "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
   "department_tab1": "Cardiology",
@@ -98,6 +109,7 @@
   "department5_title": "Est eveniet ipsam sindera pad rone matrelat sando reda",
   "department5_sub": "Omnis blanditiis saepe eos autem qui sunt debitis porro quia.",
   "department5_text": "Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel",
+
   "doctors_title": "Doctors",
   "doctors_description": "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
   "doctor1_name": "Walter White",
@@ -112,6 +124,7 @@
   "doctor4_name": "Amanda Jepson",
   "doctor4_position": "Neurosurgeon",
   "doctor4_text": "Dolorum tempora officiis odit laborum officiis et et accusamus",
+
   "faq_title": "Frequently Asked Questions",
   "faq_description": "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
   "faq1_q": "Non consectetur a erat nam at lectus urna duis?",
@@ -126,6 +139,7 @@
   "faq5_a": "Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in",
   "faq6_q": "Perspiciatis quod quo quos nulla quo illum ullam?",
   "faq6_a": "Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.",
+
   "testimonials_title": "Testimonials",
   "testimonials_description": "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
   "testimonial1_name": "Saul Goodman",
@@ -143,8 +157,10 @@
   "testimonial5_name": "John Larson",
   "testimonial5_role": "Entrepreneur",
   "testimonial5_text": "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+ 
   "gallery_title": "Gallery",
   "gallery_description": "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
+
   "contact_title": "Contact",
   "contact_description": "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
   "contact_location_title": "Location",
@@ -158,37 +174,45 @@
   "contact_form_placeholder_subject": "Subject",
   "contact_form_placeholder_message": "Message",
   "contact_form_loading": "Loading",
+  "contact_form_error": "Something went wrong. Please try again.",
   "contact_form_success": "Your message has been sent. Thank you!",
   "contact_form_button": "Send Message",
+
   "footer_address_1": "A108 Adam Street",
   "footer_address_2": "New York, NY 535022",
   "footer_phone": "+1 5589 55488 55",
   "footer_email": "info@example.com",
+
   "footer_links_title": "Useful Links",
   "footer_link_home": "Home",
   "footer_link_about": "About us",
   "footer_link_services": "Services",
   "footer_link_terms": "Terms of service",
   "footer_link_privacy": "Privacy policy",
+
   "footer_services_title": "Our Services",
   "footer_service_1": "Web Design",
   "footer_service_2": "Web Development",
   "footer_service_3": "Product Management",
   "footer_service_4": "Marketing",
   "footer_service_5": "Graphic Design",
+
   "footer_hic_title": "Hic solutasetp",
   "footer_hic_1": "Molestiae accusamus iure",
   "footer_hic_2": "Excepturi dignissimos",
   "footer_hic_3": "Suscipit distinctio",
   "footer_hic_4": "Dilecta",
   "footer_hic_5": "Sit quas consectetur",
+
   "footer_nobis_title": "Nobis illum",
   "footer_nobis_1": "Ipsam",
   "footer_nobis_2": "Laudantium dolorum",
   "footer_nobis_3": "Dinera",
   "footer_nobis_4": "Trodelas",
   "footer_nobis_5": "Flexo",
+
   "footer_copyright": "© Copyright",
   "footer_all_rights": "All Rights Reserved",
+
   "welcome": "Welcome to IMCK"
 }
