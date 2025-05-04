@@ -179,6 +179,25 @@
       }
     })
   }
+
+
+  function adjustNotFoundHeight() {
+    const header = document.getElementById('header');
+    const footer = document.getElementById('footer');
+    const notFound = document.querySelector('.not-found');
+  
+    if (header && footer && notFound) {
+      const headerHeight = header.offsetHeight;
+      const footerHeight = footer.offsetHeight;
+      const availableHeight = window.innerHeight - (headerHeight + footerHeight);
+      notFound.style.minHeight = availableHeight + 'px';
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", adjustNotFoundHeight);
+  window.addEventListener("load", adjustNotFoundHeight);
+  window.addEventListener("resize", adjustNotFoundHeight);
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 

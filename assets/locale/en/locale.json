@@ -214,5 +214,10 @@
   "footer_copyright": "© Copyright",
   "footer_all_rights": "All Rights Reserved",
 
-  "welcome": "Welcome to IMCK"
+  "welcome": "Welcome to IMCK",
+
+  "error_message": "An unexpected error occurred",
+  "back_to_home": "Back to homepage",
+  "phone_label": "Phone:",
+  "email_label": "Email:"
 }
