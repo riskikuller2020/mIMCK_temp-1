@@ -3,7 +3,7 @@
 Thumbs.db
 
 # Ignore node modules and build output
-node_modules/
+node_modules/Puratiino
 dist/
 build/
 
